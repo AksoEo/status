@@ -1,0 +1,79 @@
+html, body {
+    font-family: system-ui, sans-serif;
+    background: #eee;
+    --card-bg: white;
+}
+@media (prefers-color-scheme: dark) {
+    html, body {
+        background: #222;
+        color: #fff;
+        color-scheme: dark;
+        --card-bg: black;
+    }
+}
+
+.error {
+    color: #f43;
+}
+
+.title-icon-container, h1 {
+    text-align: center;
+}
+.title-icon-container {
+    margin-top: 2em;
+}
+
+.loading {
+    text-align: center;
+    margin: 1em 0;
+    opacity: 0.7;
+}
+
+.status-checks {
+    list-style: none;
+    padding: 0 1em;
+    max-width: 76ch;
+    margin: 0 auto;
+}
+.status-checks li {
+    background: var(--card-bg);
+    box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.2), inset 0 -2px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 0.5em;
+    padding: 1em;
+    margin: 1em 0;
+}
+.status-checks li .status-label {
+    display: inline-block;
+    color: white;
+    font-size: 0.7em;
+    vertical-align: 0.2em;
+    padding: 0.1em 0.2em;
+    border-radius: 0.2em;
+    margin-right: 0.4em;
+}
+.status-checks li h2 {
+    margin: 0;
+}
+.status-checks li[data-up="true"] h2 {
+    color: #31a64f;
+}
+.status-checks li[data-up="true"] .status-label {
+    background: #31a64f;
+}
+.status-checks li[data-up="false"] h2 {
+    color: #f43;
+}
+.status-checks li[data-up="false"] .status-label {
+    background: #f43;
+}
+
+.down-since {
+    color: #f43;
+}
+.details-link {
+    display: inline-block;
+    margin-top: 0.5em;
+    color: inherit;
+    opacity: 0.5;
+    font-size: smaller;
+}
