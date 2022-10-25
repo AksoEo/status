@@ -60,7 +60,7 @@ function renderChecks(checks) {
         {
             const uptime = document.createElement('div');
             uptime.className = 'uptime';
-            uptime.textContent = STRINGS.uptime(Math.round(item.uptime) + '%');
+            uptime.textContent = STRINGS.uptime((Math.round(item.uptime * 100) / 100) + '%');
             li.appendChild(uptime);
         }
 
